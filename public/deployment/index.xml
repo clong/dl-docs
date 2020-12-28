@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment on DetectionLab</title>
+    <link>https://detectionlab.network/deployment/</link>
+    <description>Recent content in Deployment on DetectionLab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Aug 2020 14:41:13 -0700</lastBuildDate>
+    
+	<atom:link href="https://detectionlab.network/deployment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MacOS: Virtualbox &amp; VMware</title>
+      <link>https://detectionlab.network/deployment/macosvm/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/macosvm/</guid>
+      <description>Supported Provisioners  Virualbox A licensed copy of VMware Fusion  The VMWare Desktop Vagrant plugin is $79 and is required to use Vagrant with VMware. Install it with vagrant plugin install vagrant-vmware-desktop. License it with vagrant plugin license vagrant-vmware-desktop &amp;lt;path_to_.lic&amp;gt;. Additionally, the Vagrant VMware Utility must also be installed    If you have both Virtualbox and VMware installed, consider disabling the network adapters for the provider that you are not using.</description>
+    </item>
+    
+    <item>
+      <title>Windows: Virtualbox &amp; VMware</title>
+      <link>https://detectionlab.network/deployment/windowsvm/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/windowsvm/</guid>
+      <description>Supported Provisioners  Virualbox A licensed copy of VMware Workstation  The VMWare Desktop Vagrant plugin is $79 and is required to use Vagrant with VMware. Install it with vagrant plugin install vagrant-vmware-desktop. License it with vagrant plugin license vagrant-vmware-desktop &amp;lt;path_to_.lic&amp;gt;. Additionally, the Vagrant VMware Utility must also be installed    If you have both Virtualbox and VMware installed, consider disabling the network adapters for the provider that you are not using.</description>
+    </item>
+    
+    <item>
+      <title>Linux: Virtualbox &amp; VMware</title>
+      <link>https://detectionlab.network/deployment/linuxvm/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/linuxvm/</guid>
+      <description>Supported Provisioners  Virualbox A licensed copy of VMware Fusion  The VMWare Desktop Vagrant plugin is $79 and is required to use Vagrant with VMware. Install it with vagrant plugin install vagrant-vmware-desktop. License it with vagrant plugin license vagrant-vmware-desktop &amp;lt;path_to_.lic&amp;gt;. Additionally, the Vagrant VMware Utility must also be installed    If you have both Virtualbox and VMware installed, consider disabling the network adapters for the provider that you are not using.</description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>https://detectionlab.network/deployment/aws/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/aws/</guid>
+      <description>Prerequisites  Terraform An AWS account An IAM user and role for Terraform  An AWS keypair for that user   AWS CLI  Deployment Expected time to completion: 25 minutes
+By building DetectionLab in AWS, we can take advantage of the pre-built Windows AMIs that have already been completely provisioned. Here is what happens when terraform apply is called:
+ A VPC is created A subnet is created An internet gateway is created to give our subnet access to the outside world A security group is created to allow inbound traffic from whitelisted IP addresses.</description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://detectionlab.network/deployment/azure/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/azure/</guid>
+      <description>Prerequisites (~30-60 minutes) Have an active Azure account. If you don&amp;rsquo;t have one yet, they give you $200 worth of credit to use within the first 30 days! Install Terraform and move it to a directory included in your system&amp;rsquo;s PATH. Install Ansible. This will be used to provision the instances. Some users may prefer to install Ansible inside of a virtual environment; that&amp;rsquo;s fine too. Install the Azure command line client and make sure it&amp;rsquo;s included in your system&amp;rsquo;s PATH.</description>
+    </item>
+    
+    <item>
+      <title>ESXi</title>
+      <link>https://detectionlab.network/deployment/esxi/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/esxi/</guid>
+      <description>An additional step-by-step guide can be found here which also details the ESXi installation process: https://clo.ng/blog/detectionlab-on-esxi/
+Prereqs (~30-60 minutes)  Have an ESXi instance version 6 or higher. VSphere is NOT required. Terraform version 0.13 or higher is required as it provides support for installing Terraform providers directly from the Terraform Registry. The ESXi Terraform Provider built by https://github.com/josenk/terraform-provider-esxi is required, but will be installed automatically during a later step. Your ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network.</description>
+    </item>
+    
+    <item>
+      <title>HyperV</title>
+      <link>https://detectionlab.network/deployment/hyperv/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/hyperv/</guid>
+      <description>Intro This page contains the instruction to build DetectionLab for HyperV. Hyper-V support for DetectionLab is a recent addition and requires more testing to ensure its stability and usability.
+A big thank you to @man715 for adding this in PR #513
+I do not officially support or troubleshoot DetectionLab issues using the HyperV provider. You&amp;rsquo;re welcome to open issues for community support, but I will not personally be able to assist with them.</description>
+    </item>
+    
+    <item>
+      <title>LibVirt</title>
+      <link>https://detectionlab.network/deployment/libvirt/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/libvirt/</guid>
+      <description>Intro This page contains the instruction to build DetectionLab for Qemu/LibVirt. This is the provider for you if:
+ You are familiar with LibVirt, virt-manager and Qemu and prefer this software stack instead of VirtualBox You are willing to spend a bit more time thinkering with the build process as it is more hands-on than the official DetectionLab build process  A step-by-step guide is available at https://selorasec.wordpress.com/2019/12/03/ad-in-a-box-for-pocs-and-iocs-on-the-cheap-detectionlab-on-libvirt/#Setting_Up_Vagrant.
+A big thank you to @Selora for adding this in PR #254</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting &amp; Known Issues</title>
+      <link>https://detectionlab.network/deployment/troubleshooting/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/deployment/troubleshooting/</guid>
+      <description>An unfortunate result of maintaining a project with so many moving parts is that it&amp;rsquo;s prone to have issues. Although I do my best to keep everything working and run automated build tests once per week, sometimes issues slip through the cracks.
+Be sure to check the GitHub issues page for solved issues related to your problem: https://github.com/clong/DetectionLab/issues
+Here are some strategies for resolving common problems:
+ Issue: You run into an error while provisioning a host</description>
+    </item>
+    
+  </channel>
+</rss>

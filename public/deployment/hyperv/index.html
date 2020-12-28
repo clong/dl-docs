@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="description" content="DetectionLab Documentation">
+<meta name="author" content="clong">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>HyperV :: DetectionLab</title>
+
+    
+    <link href="/css/nucleus.css?1609102130" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1609102130" rel="stylesheet">
+    <link href="/css/hybrid.css?1609102130" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1609102130" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1609102130" rel="stylesheet">
+    <link href="/css/auto-complete.css?1609102130" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1609102130" rel="stylesheet">
+    <link href="/css/theme.css?1609102130" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1609102130" rel="stylesheet">
+    
+    <link href="/css/theme-clong.css?1609102130" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1609102130"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/deployment/hyperv/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://detectionlab.network">
+  <a href="https://github.com/clong/DetectionLab"><img src="https://github.com/clong/DetectionLab/raw/master/img/DetectionLab.png"></a>
+
+  <a href="https://github.com/clong/DetectionLab/commit/master"><img src="https://camo.githubusercontent.com/a167737b7cdcc29db5d8147ae5d026ee1e795f02/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f636c6f6e672f446574656374696f6e4c61622e7376673f7374796c653d666c61742d737175617265"></a>
+  <div style="height:34px">
+    <iframe src="https://github.com/sponsors/clong/button" title="Sponsor clong" height="35" width="116" style="border: 0;"></iframe>
+  </div>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1609102130"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609102130"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/detectionlab.network";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1609102130"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <i class='fas fa-asterisk'></i> Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/infoandcreds/" title="Lab Information and Credentials" class="dd-item ">
+        <a href="/introduction/infoandcreds/">
+        Lab Information and Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/prerequisites/" title="Prerequisites" class="dd-item ">
+        <a href="/introduction/prerequisites/">
+        Prerequisites
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/packerandvagrant/" title="Understanding Packer &amp; Vagrant" class="dd-item ">
+        <a href="/introduction/packerandvagrant/">
+        Understanding Packer &amp; Vagrant
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/basicvagrant/" title="Basic Vagrant Usage" class="dd-item ">
+        <a href="/introduction/basicvagrant/">
+        Basic Vagrant Usage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/continuousintegration/" title="Continuous Integration" class="dd-item ">
+        <a href="/introduction/continuousintegration/">
+        Continuous Integration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/deployment/" title="Deployment" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/deployment/">
+          <i class='fas fa-hammer'></i> Deployment
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/macosvm/" title="MacOS: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/macosvm/">
+        MacOS: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/windowsvm/" title="Windows: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/windowsvm/">
+        Windows: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/linuxvm/" title="Linux: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/linuxvm/">
+        Linux: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/aws/" title="AWS" class="dd-item ">
+        <a href="/deployment/aws/">
+        AWS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/azure/" title="Azure" class="dd-item ">
+        <a href="/deployment/azure/">
+        Azure
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/esxi/" title="ESXi" class="dd-item ">
+        <a href="/deployment/esxi/">
+        ESXi
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/hyperv/" title="HyperV" class="dd-item active">
+        <a href="/deployment/hyperv/">
+        HyperV
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/libvirt/" title="LibVirt" class="dd-item ">
+        <a href="/deployment/libvirt/">
+        LibVirt
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/troubleshooting/" title="Troubleshooting &amp; Known Issues" class="dd-item ">
+        <a href="/deployment/troubleshooting/">
+        Troubleshooting &amp; Known Issues
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/usage/" title="Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/usage/">
+          <i class='fas fa-server'></i> Usage
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/atomicredteam/" title="" class="dd-item ">
+        <a href="/usage/atomicredteam/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/autorunstowineventlog/" title="" class="dd-item ">
+        <a href="/usage/autorunstowineventlog/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/badblood/" title="" class="dd-item ">
+        <a href="/usage/badblood/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/mimikatz/" title="" class="dd-item ">
+        <a href="/usage/mimikatz/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/splunk/" title="" class="dd-item ">
+        <a href="/usage/splunk/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/sysmon/" title="" class="dd-item ">
+        <a href="/usage/sysmon/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/velociraptor/" title="" class="dd-item ">
+        <a href="/usage/velociraptor/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/zeek/" title="" class="dd-item ">
+        <a href="/usage/zeek/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/customization/" title="Customization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/customization/">
+          <i class='fas fa-cogs'></i> Customization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/buildami/" title="AWS: Building your own AMIs" class="dd-item ">
+        <a href="/customization/buildami/">
+        AWS: Building your own AMIs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/buildpackerboxes/" title="Building Your Own Packer Boxes" class="dd-item ">
+        <a href="/customization/buildpackerboxes/">
+        Building Your Own Packer Boxes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/differentawsregion/" title="Deploying DetectionLab in a Different AWS Region" class="dd-item ">
+        <a href="/customization/differentawsregion/">
+        Deploying DetectionLab in a Different AWS Region
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/bots/" title="Installing the Boss of the SOC (BOTS) Datasets" class="dd-item ">
+        <a href="/customization/bots/">
+        Installing the Boss of the SOC (BOTS) Datasets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/badblood/" title="Use BadBlood to Add Random Users and Groups to Active Directory" class="dd-item ">
+        <a href="/customization/badblood/">
+        Use BadBlood to Add Random Users and Groups to Active Directory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://twitter.com/intent/follow?screen_name=detectionlab"><br/><img src='https://img.shields.io/twitter/follow/DetectionLab.svg?style=social' alt='follow on Twitter'></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/clong/detectionlab"><i class='fab fa-github'></i> DetectionLab</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>DetectionLab</a> > <a href='/deployment/'>Deployment</a> > HyperV
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#known-issues">Known Issues</a></li>
+        <li><a href="#how-this-build-works">How this build works</a></li>
+      </ul>
+    </li>
+    <li><a href="#note">Note</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              HyperV
+            </h1>
+          
+
+        
+
+
+<h3 id="intro">Intro</h3>
+<p>This page contains the instruction to build DetectionLab for HyperV.
+Hyper-V support for DetectionLab is a recent addition and requires more testing to ensure its stability and usability.</p>
+<p>A big thank you to <a href="https://github.com/man715">@man715</a> for adding this in <a href="https://github.com/clong/DetectionLab/pull/513">PR #513</a></p>
+
+<div class="notices info" ><p>I do not officially support or troubleshoot DetectionLab issues using the HyperV provider. You&rsquo;re welcome to open issues for community support, but I will not personally be able to assist with them.</p>
+</div>
+
+<h3 id="requirements">Requirements</h3>
+<p>The version of Hyper-V will need to be compatible with Hyper-V VM configuration version 9.0.
+You will need to be running one of the following operating systems:</p>
+<ul>
+<li>Windows 10 1809 or later</li>
+<li>Windows Server 2019</li>
+<li>Windows Hyper-V Server 2019</li>
+</ul>
+<p>For a breakdown of what Operating Systems support which VM configuration versions please visit: (<a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server">https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server</a>)
+This build also requires vagrant-reload. If you do not have it installed, you will be prompted to install it.</p>
+<h3 id="known-issues">Known Issues</h3>
+<p>Unfortunately, due to some issues with Vagrant and Microsoft, running DetectionLab with Hyper-V is not as easy as it is with other providers. You will need to do the following BEFORE trying to run <code>vagrant up</code>.</p>
+<ol>
+<li>
+<p>Patch Vagant
+Vagrant does not play nice with Windows SMB share authentication. It uses cmdkey which is not properly implemented. More details about the issue can be found in this issue:(<a href="https://github.com/hashicorp/vagrant/issues/10661">https://github.com/hashicorp/vagrant/issues/10661</a>)
+To patch this, go find the mount_shared_folder.rb file and replace <code>&quot;cmdkey /add:#{options[:smb_host]} /user:#{options[:smb_username]} /pass:\&quot;#{options[:smb_password]}\&quot;&quot;</code> with <code>&quot;cmdkey '/add:\&quot;#{options[:smb_host]}\&quot;' '/user:\&quot;#{options[:smb_username]}\&quot;' '/pass:\&quot;#{options[:smb_password]}\&quot;'&quot;</code></p>
+</li>
+<li>
+<p>Windows will require you to enter an administrator username and password to be able to create and mount the SMB share.
+This means the build will not be fully automated. One thing you can do is add <code>config.vm.synced_folder '../Vagrant', '/vagrant', smb_username: &quot;username&quot;, smb_password: &quot;password&quot;</code> to the Vagrantfile on line 2. For security reasons, this is not a good idea as you will be storing your username and password in plaintext.
+By not having this line added to the Vagrantfile you will be required to put in your username and password at least 2 times per machine.</p>
+</li>
+<li>
+<p>Selecting Virtual Switch
+During the build you will also have to select the virtual switch you want to use for each server. This cannot be avoided. There is a option that can be used to force the network adapter to use a particular switch; however, using that option breaks this build process.</p>
+</li>
+</ol>
+<p>A really hacky workaround is, if you are using the smb_username and smb_password options, would be to press the option number corresponding with the virtual switch you want to use then enter four times after <code>vagrant up</code>. So, if you know you want the virtual switch 1 <code>vagrant up</code> 1 enter 1 enter 1 enter 1 enter</p>
+<p>Yes, I know hacky but it works.</p>
+<ol start="4">
+<li>A workaround for logger losing network access/assigned IP or access to any of apps including splunk after a your first shutdown, would be to edit the /etc/netplan/01-netcfg.yaml on logger&rsquo;s machine and remove anything after renderer: networkd. Then reboot the VM.</li>
+</ol>
+<p>To check if all your virtual machines have an IP assigned use the following powershell command: <code>Get-VMNetworkAdapter -VMName *</code>. See <a href="https://github.com/clong/DetectionLab/issues/525">Issue #525</a> for more detail.</p>
+<h3 id="how-this-build-works">How this build works</h3>
+<p>The majority of this build works the same as the VirtualBox build. The most notable difference is on the Windows builds. There is a script that will create an internal virtual switch called &ldquo;NATSwitch.&rdquo; Throughout the build process, a script will create a second network adapter and attach it to the NATSwitch on the VM being built. After the machine is built the original network adapter will be removed from the VM.</p>
+<h2 id="note">Note</h2>
+<p>This build will run two scripts on the host machine. It is advisable to always check any scripts that will be run on your machine before running them.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/deployment/esxi/" title="ESXi"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/deployment/libvirt/" title="LibVirt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1609102130"></script>
+    <script src="/js/perfect-scrollbar.min.js?1609102130"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1609102130"></script>
+    <script src="/js/jquery.sticky.js?1609102130"></script>
+    <script src="/js/featherlight.min.js?1609102130"></script>
+    <script src="/js/highlight.pack.js?1609102130"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1609102130"></script>
+    <script src="/js/learn.js?1609102130"></script>
+    <script src="/js/hugo-learn.js?1609102130"></script>
+
+    <link href="/mermaid/mermaid.css?1609102130" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1609102130"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

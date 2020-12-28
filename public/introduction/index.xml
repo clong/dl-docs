@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on DetectionLab</title>
+    <link>https://detectionlab.network/introduction/</link>
+    <description>Recent content in Introduction on DetectionLab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Aug 2020 14:41:13 -0700</lastBuildDate>
+    
+	<atom:link href="https://detectionlab.network/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lab Information and Credentials</title>
+      <link>https://detectionlab.network/introduction/infoandcreds/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/introduction/infoandcreds/</guid>
+      <description>Domain Name: windomain.local Admininstrator login: vagrant:vagrant Fleet login: https://192.168.38.105:8412 - admin:admin123# Splunk login: https://192.168.38.105:8000 - admin:changeme MS ATA login: https://192.168.38.103 - wef\vagrant:vagrant Guacamole login: http://192.168.38.105:8080/guacamole - vagrant:vagrant Velociraptor login: https://192.168.38.105:9999 - admin:changeme  Lab Hosts  DC - Windows 2016 Domain Controller  WEF Server Configuration GPO Powershell logging GPO Enhanced Windows Auditing policy GPO Sysmon Velociraptor osquery Splunk Universal Forwarder (Forwards Sysmon &amp;amp; osquery) Sysinternals Tools Microsft Advanced Threat Analytics Lightweight Gateway   WEF - Windows 2016 Server  Microsoft Advanced Threat Analytics Windows Event Collector Windows Event Subscription Creation Powershell transcription logging share Sysmon Velociraptor osquery Splunk Universal Forwarder (Forwards WinEventLog &amp;amp; Powershell &amp;amp; Sysmon &amp;amp; osquery) Sysinternals tools   Win10 - Windows 10 Workstation  Simulates employee workstation Sysmon Velociraptor osquery Splunk Universal Forwarder (Forwards Sysmon &amp;amp; osquery) Sysinternals Tools   Logger - Ubuntu 16.</description>
+    </item>
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>https://detectionlab.network/introduction/prerequisites/</link>
+      <pubDate>Thu, 13 Aug 2020 14:41:31 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/introduction/prerequisites/</guid>
+      <description>The pre-requisities for deploying DetectionLab depend on which platform you are deploying it to.
+Virtualbox Deploy DetectionLab to your local machine as invidudial Virtualbox VMs.
+ Windows, Linux, and MacOS are all supported 55GB+ of free disk space 16GB+ of RAM highly recommended Vagrant 2.2.9+ Packer 1.6.0+ (only required if building your own boxes) Virtualbox 6.0+ (older versions may work but are not tested)  VMware Fusion/Workstation Deploy DetectionLab to your local machine as invidudial VMware VMs.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Packer &amp; Vagrant</title>
+      <link>https://detectionlab.network/introduction/packerandvagrant/</link>
+      <pubDate>Thu, 13 Aug 2020 14:41:31 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/introduction/packerandvagrant/</guid>
+      <description>To better understand the technology behind this project, it&amp;rsquo;s important to understand the role that Packer and Vagrant have.
+A good way to think about this is to consider what would be required to build a lab like this without any automation. The steps would look something like this:
+ Obtain ISOs for Ubuntu, Windows Server 2016, and Windows 10 Using Virtualbox or VMware, install the operating systems onto the VMs Once the operating systems have been installed, tailor a few operating settings to your liking Take a snapshot of each VM once you&amp;rsquo;ve tweaked the settings Now that a snapshot has been created, begin installing software on each VM.</description>
+    </item>
+    
+    <item>
+      <title>Basic Vagrant Usage</title>
+      <link>https://detectionlab.network/introduction/basicvagrant/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/introduction/basicvagrant/</guid>
+      <description>It&amp;rsquo;s easiest to think of Vagrant as a command-line wrapper for interacting with Virtualbox and VMware.
+When running Vagrant commands, you must be in a directory containing a Vagrantfile or you will receive the following error: A Vagrant environment or target machine is required to run this command.
+ Setting a default provider If you happen to have both Virtualbox and VMware Workstation/Fusion installed, it may be helpful to set the VAGRANT_DEFAULT_PROVIDER environment variable to either vmware_desktop or virtualbox.</description>
+    </item>
+    
+    <item>
+      <title>Continuous Integration</title>
+      <link>https://detectionlab.network/introduction/continuousintegration/</link>
+      <pubDate>Thu, 13 Aug 2020 17:21:36 -0700</pubDate>
+      
+      <guid>https://detectionlab.network/introduction/continuousintegration/</guid>
+      <description>DetectionLab is built on Ubuntu 18.04 every Saturday at Midnight UTC time using the Virtualbox provider. Results of the builds can be viewed here: https://app.circleci.com/pipelines/github/clong/DetectionLab?branch=master
+The CI build process is shown in the image below:
+For more context around this, please see Continuous Integration for DetectionLab</description>
+    </item>
+    
+  </channel>
+</rss>

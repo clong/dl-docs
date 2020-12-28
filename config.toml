@@ -1,0 +1,27 @@
+baseURL = "https://detectionlab.network"
+languageCode = "en-us"
+title = "DetectionLab"
+theme = "hugo-theme-learn"
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+[params]
+  # Author of the site, will be used in meta information
+  author = "clong"
+  # Description of the site, will be used in meta information
+  description = "DetectionLab Documentation"
+  themeVariant = "clong"
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "detectionlab"
+URL = "s3://detectionlab.network?region=us-west-1"
+
+[[menu.shortcuts]]
+name = "<br/><img src='https://img.shields.io/twitter/follow/DetectionLab.svg?style=social' alt='follow on Twitter'>"
+url = "https://twitter.com/intent/follow?screen_name=detectionlab"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> DetectionLab"
+url = "https://github.com/clong/detectionlab"
+weight = 5

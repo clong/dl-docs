@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="description" content="DetectionLab Documentation">
+<meta name="author" content="clong">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>ESXi :: DetectionLab</title>
+
+    
+    <link href="/css/nucleus.css?1609102130" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1609102130" rel="stylesheet">
+    <link href="/css/hybrid.css?1609102130" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1609102130" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1609102130" rel="stylesheet">
+    <link href="/css/auto-complete.css?1609102130" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1609102130" rel="stylesheet">
+    <link href="/css/theme.css?1609102130" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1609102130" rel="stylesheet">
+    
+    <link href="/css/theme-clong.css?1609102130" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1609102130"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/deployment/esxi/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://detectionlab.network">
+  <a href="https://github.com/clong/DetectionLab"><img src="https://github.com/clong/DetectionLab/raw/master/img/DetectionLab.png"></a>
+
+  <a href="https://github.com/clong/DetectionLab/commit/master"><img src="https://camo.githubusercontent.com/a167737b7cdcc29db5d8147ae5d026ee1e795f02/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f636c6f6e672f446574656374696f6e4c61622e7376673f7374796c653d666c61742d737175617265"></a>
+  <div style="height:34px">
+    <iframe src="https://github.com/sponsors/clong/button" title="Sponsor clong" height="35" width="116" style="border: 0;"></iframe>
+  </div>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1609102130"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609102130"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/detectionlab.network";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1609102130"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <i class='fas fa-asterisk'></i> Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/infoandcreds/" title="Lab Information and Credentials" class="dd-item ">
+        <a href="/introduction/infoandcreds/">
+        Lab Information and Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/prerequisites/" title="Prerequisites" class="dd-item ">
+        <a href="/introduction/prerequisites/">
+        Prerequisites
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/packerandvagrant/" title="Understanding Packer &amp; Vagrant" class="dd-item ">
+        <a href="/introduction/packerandvagrant/">
+        Understanding Packer &amp; Vagrant
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/basicvagrant/" title="Basic Vagrant Usage" class="dd-item ">
+        <a href="/introduction/basicvagrant/">
+        Basic Vagrant Usage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/continuousintegration/" title="Continuous Integration" class="dd-item ">
+        <a href="/introduction/continuousintegration/">
+        Continuous Integration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/deployment/" title="Deployment" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/deployment/">
+          <i class='fas fa-hammer'></i> Deployment
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/macosvm/" title="MacOS: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/macosvm/">
+        MacOS: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/windowsvm/" title="Windows: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/windowsvm/">
+        Windows: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/linuxvm/" title="Linux: Virtualbox &amp; VMware" class="dd-item ">
+        <a href="/deployment/linuxvm/">
+        Linux: Virtualbox &amp; VMware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/aws/" title="AWS" class="dd-item ">
+        <a href="/deployment/aws/">
+        AWS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/azure/" title="Azure" class="dd-item ">
+        <a href="/deployment/azure/">
+        Azure
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/esxi/" title="ESXi" class="dd-item active">
+        <a href="/deployment/esxi/">
+        ESXi
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/hyperv/" title="HyperV" class="dd-item ">
+        <a href="/deployment/hyperv/">
+        HyperV
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/libvirt/" title="LibVirt" class="dd-item ">
+        <a href="/deployment/libvirt/">
+        LibVirt
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/deployment/troubleshooting/" title="Troubleshooting &amp; Known Issues" class="dd-item ">
+        <a href="/deployment/troubleshooting/">
+        Troubleshooting &amp; Known Issues
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/usage/" title="Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/usage/">
+          <i class='fas fa-server'></i> Usage
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/atomicredteam/" title="" class="dd-item ">
+        <a href="/usage/atomicredteam/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/autorunstowineventlog/" title="" class="dd-item ">
+        <a href="/usage/autorunstowineventlog/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/badblood/" title="" class="dd-item ">
+        <a href="/usage/badblood/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/mimikatz/" title="" class="dd-item ">
+        <a href="/usage/mimikatz/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/splunk/" title="" class="dd-item ">
+        <a href="/usage/splunk/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/sysmon/" title="" class="dd-item ">
+        <a href="/usage/sysmon/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/velociraptor/" title="" class="dd-item ">
+        <a href="/usage/velociraptor/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/usage/zeek/" title="" class="dd-item ">
+        <a href="/usage/zeek/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/customization/" title="Customization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/customization/">
+          <i class='fas fa-cogs'></i> Customization
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/buildami/" title="AWS: Building your own AMIs" class="dd-item ">
+        <a href="/customization/buildami/">
+        AWS: Building your own AMIs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/buildpackerboxes/" title="Building Your Own Packer Boxes" class="dd-item ">
+        <a href="/customization/buildpackerboxes/">
+        Building Your Own Packer Boxes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/differentawsregion/" title="Deploying DetectionLab in a Different AWS Region" class="dd-item ">
+        <a href="/customization/differentawsregion/">
+        Deploying DetectionLab in a Different AWS Region
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/bots/" title="Installing the Boss of the SOC (BOTS) Datasets" class="dd-item ">
+        <a href="/customization/bots/">
+        Installing the Boss of the SOC (BOTS) Datasets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/customization/badblood/" title="Use BadBlood to Add Random Users and Groups to Active Directory" class="dd-item ">
+        <a href="/customization/badblood/">
+        Use BadBlood to Add Random Users and Groups to Active Directory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://twitter.com/intent/follow?screen_name=detectionlab"><br/><img src='https://img.shields.io/twitter/follow/DetectionLab.svg?style=social' alt='follow on Twitter'></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/clong/detectionlab"><i class='fab fa-github'></i> DetectionLab</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>DetectionLab</a> > <a href='/deployment/'>Deployment</a> > ESXi
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prereqs-30-60-minutes">Prereqs (~30-60 minutes)</a></li>
+    <li><a href="#steps">Steps</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#configuring-windows-10-with-wsl-as-a-provisioning-host">Configuring Windows 10 with WSL as a Provisioning Host</a></li>
+    <li><a href="#future-work-required">Future work required</a></li>
+    <li><a href="#debugging--troubleshooting">Debugging / Troubleshooting</a></li>
+    <li><a href="#credits">Credits</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              ESXi
+            </h1>
+          
+
+        
+
+
+<p><img src="https://github.com/clong/DetectionLab/blob/master/img/esxi_overview.jpeg?raw=true&amp;width=1200" alt="Overview"></p>
+<p>An additional step-by-step guide can be found here which also details the ESXi installation process: <a href="https://clo.ng/blog/detectionlab-on-esxi/">https://clo.ng/blog/detectionlab-on-esxi/</a></p>
+<h2 id="prereqs-30-60-minutes">Prereqs (~30-60 minutes)</h2>
+<ol>
+<li>Have an ESXi instance version 6 or higher. VSphere is <strong>NOT</strong> required.</li>
+<li>Terraform version 0.13 or higher is required as it provides support for installing Terraform providers directly from the Terraform Registry.</li>
+<li>The ESXi Terraform Provider built by <a href="https://github.com/josenk/terraform-provider-esxi">https://github.com/josenk/terraform-provider-esxi</a> is required, but will be installed automatically during a later step.</li>
+<li>Your ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running Terraform - ensure your firewall is configured to allow this.</li>
+<li><a href="https://my.vmware.com/web/vmware/details?downloadGroup=OVFTOOL420&amp;productId=618">OVFTool</a> must be installed and in your path.
+<ul>
+<li>On MacOS, I solved this by creating a symbolic link to the ovftool included in VMWare Fusion: <code>sudo ln -s &quot;/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool&quot; &quot;/usr/local/bin/ovftool&quot;</code></li>
+<li>Downloads for OVFTool are also here: <a href="https://code.vmware.com/web/tool/4.4.0/ovf">https://code.vmware.com/web/tool/4.4.0/ovf</a></li>
+</ul>
+</li>
+<li>On your ESXi instance, you must:
+<ol>
+<li>Enable SSH</li>
+<li>Enable the &ldquo;Guest IP Hack&rdquo;</li>
+<li>Open VNC ports on the firewall (not reqired for ESXi 7.0+)</li>
+</ol>
+<ul>
+<li>Instructions for those steps are here: <a href="https://nickcharlton.net/posts/using-packer-esxi-6.html">https://nickcharlton.net/posts/using-packer-esxi-6.html</a></li>
+<li>Alternatively, you can install the VIB file from <a href="https://github.com/sukster/ESXi-Packer-VNC">https://github.com/sukster/ESXi-Packer-VNC</a> which will automatically open the VNC ports on the ESXi firewall.</li>
+</ul>
+</li>
+<li><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Install Ansible</a> and pywinrm via <code>pip3 install ansible pywinrm --user</code> or by creating and using a virtual environment.</li>
+<li><a href="https://www.packer.io/downloads">Packer</a> v1.6.3+ must be installed and in your PATH</li>
+<li><a href="https://linux.die.net/man/1/sshpass">sshpass</a> must be installed to allow Ansible to use password login. On MacOS, install via <code>brew install hudochenkov/sshpass/sshpass</code> as <code>brew install sshpass</code> does not allow it to be installed.</li>
+</ol>
+<h2 id="steps">Steps</h2>
+<ol>
+<li><strong>(5 Minutes)</strong> Edit the variables in <code>DetectionLab/ESXi/Packer/variables.json</code> to match your ESXi configuration. The <code>esxi_network_with_dhcp_and_internet</code> variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it&rsquo;s being built in Packer. This is usually <strong>VM Network</strong>.
+<img src="https://clo.ng/img/2020/11/variablesjson.png" alt="variablesjson">
+Note: As of ESXI 7.x, <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html">the built-in VNC server has been removed</a>. If you are using ESXI 7.x, we&rsquo;ll need to use the <code>vnc_over_websocket</code> directive.</li>
+</ol>
+<h4 id="configuration-for-esxi-7x">Configuration for ESXi 7.x</h4>
+<p>To do this, add the following two directives as the top items under the <code>builders</code> array</p>
+<ul>
+<li>&ldquo;vnc_over_websocket&rdquo;: true,</li>
+<li>&ldquo;insecure_connection&rdquo;: true,</li>
+</ul>
+<pre><code>{
+  &quot;builders&quot;: [
+    {
+      &quot;vnc_over_websocket&quot;: true,
+      &quot;insecure_connection&quot;: true,
+      &quot;vnc_disable_password&quot;: true,
+      &quot;keep_registered&quot;: true,
+...
+</code></pre><p>to the following files:</p>
+<ul>
+<li>DetectionLab/ESXi/Packer/windows_10_esxi.json</li>
+<li>DetectionLab/ESXi/Packer/windows_2016_esxi.json</li>
+<li>DetectionLab/ESXi/Packer/ubuntu1804_esxi.json</li>
+</ul>
+<p>The remaining steps apply to both both ESXi 6.x and 7.x:</p>
+<ol start="2">
+<li><strong>(45 Minutes)</strong> From the <code>DetectionLab/ESXi/Packer</code> directory, run:</li>
+</ol>
+<ul>
+<li><code>PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json</code></li>
+<li><code>PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json</code></li>
+<li><code>PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu1804_esxi.json</code></li>
+</ul>
+<p>These commands can be run in parallel from three separate terminal sessions.</p>
+<p><img src="https://github.com/clong/DetectionLab/blob/master/img/esxi_packer.png?raw=true" alt="Packer"></p>
+<ol start="3">
+<li>
+<p><strong>(1 Minute)</strong> Once the Packer builds finish, verify that you now see Windows10, WindowsServer2016, and Ubuntu1804 in your ESXi console
+<img src="https://github.com/clong/DetectionLab/blob/master/img/esxi_console.png?raw=true" alt="Ansible"></p>
+</li>
+<li>
+<p><strong>(5 Minutes)</strong> In <code>DetectionLab/ESXi</code>, <a href="https://www.terraform.io/docs/configuration/variables.html#variable-definitions-tfvars-files">Create a terraform.tfvars file</a> (RECOMMENDED) to override the default variables listed in variables.tf.
+<img src="https://clo.ng/img/2020/11/variablestfvars.png" alt="variablestfvars"></p>
+</li>
+<li>
+<p><strong>(25 Minutes)</strong> From <code>DetectionLab/ESXi</code>, run <code>terraform init</code>. The <a href="https://github.com/josenk/terraform-provider-esxi">ESXi Terraform provider</a> should install automatically during this step:</p>
+</li>
+</ol>
+<pre><code>$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding josenk/esxi versions matching &quot;1.8.0&quot;...
+- Installing josenk/esxi v1.8.0...
+- Installed josenk/esxi v1.8.0 (self-signed, key ID A3C2BB2C490C3920)
+
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://www.terraform.io/docs/plugins/signing.html
+
+Terraform has been successfully initialized!
+</code></pre><ol start="6">
+<li>Running terraform apply should then prompt us to create the logger, dc, wef, and win10 instances:</li>
+</ol>
+<pre><code>$ terraform apply
+&lt;snip&gt;
+Plan: 4 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+</code></pre>
+<div class="notices info" ><p>If an ESXi server is managed by a vCenter, terraform will fail with: <code>Access to resource settings on the host is restricted to the server that is managing it: xx.xx.xx.</code> To allow terraform to work, a user can SSH into the ESXi server and run:
+<code>/etc/init.d/vpxa stop; /etc/init.d/hostd restart</code>
+This will disconnect the host from the vCenter. Once the terrafrom is complete, run <code>/etc/init.d/vpxa start</code> to reconnect with the vCenter server.</p>
+</div>
+
+<p>Once finished, you should see something like the following:
+<img src="https://clo.ng/img/2020/11/terraform-done.png" alt="tfdone"></p>
+<ol start="7">
+<li>Once Terraform has finished bringing the hosts online, change your directory to <code>DetectionLab/ESXi/Ansible</code></li>
+<li><strong>(1 Minute)</strong> Edit <code>DetectionLab/ESXi/Ansible/inventory.yml</code> and replace the IP Addresses with the respective IP Addresses of your ESXi VMs. At times, the Terraform output is unable to derive the IP address of hosts, so you may have to log into the ESXi console to find that information and then enter the IP addresses into <code>inventory.yml</code>
+<img src="https://clo.ng/img/2020/11/ip.png" alt="console">
+<img src="https://clo.ng/img/2020/11/inventory.png" alt="inventory"></li>
+<li><strong>(3 Minute)</strong> Before running any Ansible playbooks, I highly recommend taking snapshots of all your VMs! If anything goes wrong with provisioning, you can simply restore the snapshot and easily debug the issue.</li>
+<li><strong>(30 Minutes)</strong> Run <code>ansible-playbook -v detectionlab.yml</code>. This will provision the hosts one by one using Ansible. If you’d like to provision each host individually in parallel, you can use ansible-playbook -v detectionlab.yml &ndash;tags &ldquo;[logger|dc|wef|win10]&rdquo; and run each in a separate terminal tab.
+
+<div class="notices info" ><p>If running Ansible causes a <code>fork()</code> related error message, set the following environment variable before running Ansible: <code>export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES</code>. More about this <a href="https://github.com/clong/DetectionLab/issues/543">here.</a>.</p>
+</div>
+</li>
+<li>If all goes well, you should see the following and your lab is complete!
+<img src="https://github.com/clong/DetectionLab/blob/master/img/esxi_ansible.png?raw=true" alt="Ansible"></li>
+</ol>
+<p>If you run into any issues along the way, please open an issue on Github and I&rsquo;ll do my best to find a solution.</p>
+<h2 id="configuring-windows-10-with-wsl-as-a-provisioning-host">Configuring Windows 10 with WSL as a Provisioning Host</h2>
+<p>Note: Run the following commands as a root user or with sudo</p>
+<ol>
+<li>In Windows 10 install WSL (version 1 or 2)</li>
+<li>Install Ubuntu 18.04 app from the Microsoft Store</li>
+<li>Update repositories and upgrade the distro: apt update &amp;&amp; upgrade</li>
+<li>Ensure you will install the most recent Ansible version: apt-add-repository &ndash;yes &ndash;update ppa:ansible/ansible</li>
+<li>Install the following packages: apt install python python-pip ansible unzip sshpass libffi-dev libssl-dev</li>
+<li>Install PyWinRM using: pip install pywinrm</li>
+<li>Install Terraform and Packer by downloading the 64-bit Linux binaries and moving them to /usr/local/bin</li>
+<li>Install VMWare OVF tool by downloading 64-bit Linux binary from my.vmware.com and running it with &ldquo;&ndash;eulas-agreed&rdquo; option</li>
+<li>Download the Linux binary for the Terraform ESXi Provider from <a href="https://github.com/josenk/terraform-provider-esxi/releases">https://github.com/josenk/terraform-provider-esxi/releases</a> and move it to /usr/local/bin</li>
+<li>From &ldquo;DetectionLab/ESXi/ansible&rdquo; directory, run: &ldquo;ansible &ndash;version&rdquo; and ensure that the config file used is &ldquo;DetectionLab/ESXi/ansible/ansible.cfg&rdquo;. If not, implement the Ansible &ldquo;world-writtable directory&rdquo; fix by going to running: &ldquo;chmod o-w .&rdquo; from &ldquo;DetectionLab/ESXi/ansible&rdquo; directory.</li>
+</ol>
+<h2 id="future-work-required">Future work required</h2>
+<ul>
+<li>It probably makes sense to abstract all of the logic in <code>logger_bootstrap.sh</code> into individual Ansible tasks</li>
+<li>There&rsquo;s a lot of areas to make reliability improvements</li>
+<li>I&rsquo;m guessing there&rsquo;s a way to parallelize some of this execution: <a href="https://medium.com/developer-space/parallel-playbook-execution-in-ansible-30799ccda4e0">https://medium.com/developer-space/parallel-playbook-execution-in-ansible-30799ccda4e0</a></li>
+</ul>
+<h2 id="debugging--troubleshooting">Debugging / Troubleshooting</h2>
+<ul>
+<li>If an Ansible playbook fails, you can pick up where it left off with <code>ansible-playbook -v detectionlab.yml --tags=&quot;&lt;hostname&gt;&quot; --start-at-task=&quot;taskname&quot;</code></li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>As usual, this work is based off the heavy lifting that others have done. My primary sources for this work were:</p>
+<ul>
+<li><a href="https://github.com/josenk/terraform-provider-esxi">Josenk&rsquo;s Terraform-ESXI-Provider</a> - Without this, there would be no way to deploy DL to ESXi without paying for VSphere. Send him/her some love 💌</li>
+<li><a href="https://dteslya.engineer/automation/2019-02-19-configuring_vms_with_ansible/#setting-up-ansible">Automate Windows VM Creation and Configuration in vSphere Using Packer, Terraform and Ansible - Dmitry Teslya</a></li>
+<li><a href="https://nickcharlton.net/posts/using-packer-esxi-6.html">Building Virtual Machines with Packer on ESXi 6 - Nick Charlton</a></li>
+<li><a href="https://github.com/juju4/DetectionLab/tree/devel-azureansible/Ansible">The DetectionLab work that juju4 has been doing on Azure and Ansible</a></li>
+<li><a href="https://www.youtube.com/watch?v=5qap5aO4i9A">lofi hip hop radio - beats to relax/study to</a> 🔉</li>
+</ul>
+<p>Thank you to all of the sponsors who made this possible!</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/deployment/azure/" title="Azure"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/deployment/hyperv/" title="HyperV" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1609102130"></script>
+    <script src="/js/perfect-scrollbar.min.js?1609102130"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1609102130"></script>
+    <script src="/js/jquery.sticky.js?1609102130"></script>
+    <script src="/js/featherlight.min.js?1609102130"></script>
+    <script src="/js/highlight.pack.js?1609102130"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1609102130"></script>
+    <script src="/js/learn.js?1609102130"></script>
+    <script src="/js/hugo-learn.js?1609102130"></script>
+
+    <link href="/mermaid/mermaid.css?1609102130" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1609102130"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
