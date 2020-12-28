@@ -12,10 +12,11 @@ the process of bringing an ActiveDirectory environment online complete with logg
 DetectionLab can currently be deployed to the following platforms:
 * Virtualbox (Windows, MacOS, Linux)
 * VMware Workstation/Fusion (Windows, MacOS, Linux)
+* HyperV
 * LibVirt (Not officially supported)
+* ESXi
 * AWS
 * Azure
-* ESXi 
 
 DetectionLab was built with defenders in mind. Offensive security practitioners have entire Linux distributions dedicated to streamline
 their work, so DetectionLab is my effort to simplify testing, analysis, research for defensive security practitioners. 
@@ -28,7 +29,7 @@ Read more about Detection Lab on Medium here: https://medium.com/@clong/introduc
 * A custom Windows auditing configuration is set via GPO to include command line process auditing and additional OS-level logging
 * [Palantir's Windows Event Forwarding](http://github.com/palantir/windows-event-forwarding)  subscriptions and custom channels are implemented
 * Powershell transcript logging is enabled. All logs are saved to `\\wef\pslogs`
-* osquery comes installed on each host and is pre-configured to connect to a [Fleet](https://kolide.co/fleet) server via TLS. Fleet is preconfigured with the configuration from [Palantir's osquery Configuration](https://github.com/palantir/osquery-configuration)
+* osquery comes installed on each host and is pre-configured to connect to a [Fleet](https://github.com/fleetdm/fleet) server via TLS. Fleet is preconfigured with the configuration from [Palantir's osquery Configuration](https://github.com/palantir/osquery-configuration)
 * Sysmon is installed and configured using [Olaf Hartong's open-sourced Sysmon configuration](https://github.com/olafhartong/sysmon-modular)
 * All autostart items are logged to Windows Event Logs via [AutorunsToWinEventLog](https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog)
 * Zeek and Suricata are pre-configured to monitor and alert on network traffic
