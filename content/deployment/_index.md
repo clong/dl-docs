@@ -7,7 +7,7 @@ pre = "<i class='fas fa-hammer'></i> "
 +++
 
 #### [MacOS: Deploy using Virtualbox or VMware ](macosvm/)
-#### [Winows: Deploy using Virtualbox or VMware](windowsvm/)
+#### [Windows: Deploy using Virtualbox or VMware](windowsvm/)
 #### [Linux: Deploy using Virtualbox or VMware](linuxvm/)
 #### [AWS Deployment](aws/)
 #### [Azure Deployment](azure/)
