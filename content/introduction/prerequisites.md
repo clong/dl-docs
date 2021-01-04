@@ -9,7 +9,7 @@ The pre-requisities for deploying DetectionLab depend on which platform you are 
 
 #### Virtualbox
 
-Deploy DetectionLab to your local machine as invidudial Virtualbox VMs.
+Deploy DetectionLab to your local machine as individual Virtualbox VMs.
 
 * Windows, Linux, and MacOS are all supported
 * 55GB+ of free disk space
@@ -20,7 +20,7 @@ Deploy DetectionLab to your local machine as invidudial Virtualbox VMs.
 
 #### VMware Fusion/Workstation
 
-Deploy DetectionLab to your local machine as invidudial VMware VMs.
+Deploy DetectionLab to your local machine as individual VMware VMs.
 
 * Windows, Linux, and MacOS are all supported
 * VMware Fusion or Workstation (It must be registered, trials will not work)
@@ -49,7 +49,7 @@ Deploy DetectionLab to Azure account as 4 separate instances.
 * [az](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) (Azure commandline)
 * Ansible
 
-#### ESXi 
+#### ESXi
 
 Deploy DetectionLab to an ESXi server.
 
@@ -62,9 +62,9 @@ Deploy DetectionLab to an ESXi server.
 
 #### HyperV
 
-* Windows 10 1809 or later 
-* Windows Server 2019 
-* Windows Hyper-V Server 2019 
+* Windows 10 1809 or later
+* Windows Server 2019
+* Windows Hyper-V Server 2019
 
 #### LibVirt
 
