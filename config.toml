@@ -1,4 +1,4 @@
-baseURL = "https://detectionlab.network"
+baseURL = "/"
 languageCode = "en-us"
 title = "DetectionLab"
 theme = "hugo-theme-learn"
