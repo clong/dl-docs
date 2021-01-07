@@ -11,3 +11,4 @@ pre = "<i class='fas fa-cogs'></i> "
 #### [Deploying DetectionLab in a Different AWS Region](differentawsregion/)
 #### [Installing the Boss of the SOC (BOTS) Datasets](bots/)
 #### [Use BadBlood to Add Random Users and Groups to Active Directory](badblood/)
+#### [Feature Requests](feature_requests/)
