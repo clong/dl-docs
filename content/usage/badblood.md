@@ -9,11 +9,11 @@ weight: 4
 
 ## Description
 
-Fill an Active Directory domain with thousands of objects such as users, computers, OUs, etc.
+Badblood fills an Active Directory domain with thousands of objects such as users, computers, OUs, etc.
 
 ## Purpose
 
-Allow the user to quickly populate a domain without having to manually add users, computers, etc.
+Badblood allows the user to quickly populate a domain without having to manually add users, computers, etc.
 
 ## Configuration Details
 
