@@ -10,10 +10,10 @@ weight: 3
 ---
 
 ## Purpose
-Log all of the items enumerated by Sysinternals' Autoruns to the Windows Event Log for easy analysis/searching
+Log all of the items enumerated by Sysinternals' Autoruns to the Windows Event Log for easy analysis/searching.
 
 ## Configuration Details
-* Runs once a day 
+* Runs once a day
 * Triggered by a scheduled task named "AutorunsToWinEventLog"
 
 ## Data Location
