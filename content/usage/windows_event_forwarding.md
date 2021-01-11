@@ -8,13 +8,13 @@ weight: 13
 ![](../../images/windowseventforwarding.png)
 
 ## Description
-Windows Event Forwarding (WEF) is a powerful log forwarding solution integrated within modern versions of Microsoft Windows. 
+Windows Event Forwarding (WEF) is a powerful log forwarding solution integrated within modern versions of Microsoft Windows.
 
 * Windows Event Forwarding allows for event logs to be sent, either via a push or pull mechanism, to one or more centralized Windows Event Collector (WEC) servers.
 * WEF is agent-free, and relies on native components integrated into the operating system. WEF is supported for both workstation and server builds of Windows.
 
 ## Purpose
-Instead relying on third-party forwarders (e.g. Splunk, beats), we can leverage native Windows components. Windows event forwarding subscriptions are XML documents that allow you to include or exclude events based on very granular information. In DetectionLab, advanced Windows auditing is enabled and the WEF host is used as a Windows event collector. Windows endpoints pull event "subscriptions" from WEF, which define which events we want to collect. Once the events have been centralized on WEF, they are then sent to Splunk via a single Splunk forwarder.
+Instead of relying on third-party forwarders (e.g. Splunk, Beats), we can leverage native Windows components. Windows event forwarding subscriptions are XML documents that allow you to include or exclude events based on highly granular information. In DetectionLab, advanced Windows auditing is enabled and the WEF host is used as a Windows event collector. Windows endpoints pull event "subscriptions" from WEF, defining which events we want to collect. Once the events have been centralized on WEF, they are then sent to Splunk via a single Splunk forwarder.
 
 ## Configuration Details
 * DetectionLab uses Palantir's Windows Event Forwarding configuration: https://github.com/palantir/windows-event-forwarding

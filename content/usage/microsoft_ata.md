@@ -13,7 +13,7 @@ weight: 6
 Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats.
 
 ## Purpose
-Having Microsoft ATA allows defenders to test detections and gain a better sense of ATA's capabilities. It allows allows offensive security professionals to determine what tools and/or techniques will be detected by Microsoft ATA.
+Having Microsoft ATA allows defenders to test detections and gain a better sense of ATA's capabilities. It allows offensive security professionals to determine what tools and/or techniques will be detected by Microsoft ATA.
 
 ## Configuration Details
 * Microsoft ATA is installed on the WEF host
