@@ -8,6 +8,7 @@ weight: 7
 ![](../../images/mimikatz.png)
 
 ## Description
+Mimikatz is an open-source application that allows users to view and save authentication credentials like Kerberos tickets. 
 
 ## Purpose
 
@@ -16,3 +17,4 @@ weight: 7
 ## Data Location
 
 ## External Links
+[Mimikatz on Github](https://github.com/gentilkiwi/mimikatz)
