@@ -19,15 +19,26 @@ The purpose of Atomic Red Team in DetectionLab is to allow the user to simulate 
 
 ## Sample Usage
 
-Run Technique T1218.010 (Signed Binary Proxy Execution: Regsvr32):
-`Invoke-AtomicTest T1218.010 -TestNumbers 1,2`
+Import Powershell module and atomics-path:
+```bash
+Import-Module "C:\Tools\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\Tools\AtomicRedTeam\atomics"}
+```
+
+Run E.g. technique T1218.010 (Signed Binary Proxy Execution: Regsvr32):
+```bash
+Invoke-AtomicTest T1218.010 -TestNumbers 1,2
+```
 
 Run all techniques:
-`Invoke-AtomicTest All`
+```bash
+Invoke-AtomicTest All
+```
 
 More here: https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Local)
 
 ## Data Location
+This tools and test are located in **C:\Tools\AtomicRedTeam\\**
 
 This tool/application does not generate logs
 
