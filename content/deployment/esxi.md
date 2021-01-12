@@ -31,14 +31,25 @@ An additional step-by-step guide can be found here which also details the ESXi i
 
 1. **(5 Minutes)** Edit the variables in `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it's being built in Packer. This is usually **VM Network**.
 ![variablesjson](https://clo.ng/img/2020/11/variablesjson.png)
-Note: As of ESXI 7.x, [the built-in VNC server has been removed](https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html). If you are using ESXI 7.x, we'll need to use the `vnc_over_websocket` directive.
 
-#### Configuration for ESXi 7.x
+#### Workaround for ESXi 7.x
 
-To do this, add the following two directives as the top items under the `builders` array
+ESXi 7 will require some simple extra steps. See [this blog post](https://www.virtuallyghetto.com/2020/10/quick-tip-vmware-iso-builder-for-packer-now-supported-with-esxi-7-0.html) for more information on why this is needed.
+
+If you are running ESXi 7.x, you **must**:
+
+1. Open the following files for editing:
+
+  * DetectionLab/ESXi/Packer/windows_10_esxi.json
+  * DetectionLab/ESXi/Packer/windows_2016_esxi.json
+  * DetectionLab/ESXi/Packer/ubuntu1804_esxi.json 
+  
+2. Add the following two directives as the top items under the `builders` array to each of them
 
 * "vnc_over_websocket": true,
 * "insecure_connection": true,
+
+The resulting file should look something like
 
 ```
 {
@@ -48,22 +59,23 @@ To do this, add the following two directives as the top items under the `builder
       "insecure_connection": true,
       "vnc_disable_password": true,
       "keep_registered": true,
-...
+...continued...
 ```
 
-to the following files:
-  * DetectionLab/ESXi/Packer/windows_10_esxi.json
-  * DetectionLab/ESXi/Packer/windows_2016_esxi.json
-  * DetectionLab/ESXi/Packer/ubuntu1804_esxi.json
-
-The remaining steps apply to both both ESXi 6.x and 7.x:
+The rest of the steps in this document apply to both both ESXi 6.x and 7.x:
 
 2. **(45 Minutes)** From the `DetectionLab/ESXi/Packer` directory, run:
 * `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json`
 * `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json`
 * `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu1804_esxi.json`
 
+{{% notice info %}}
+When you build the Ubuntu VM in Packer, it will attempt to connect back to the computer you are running the Packer command from in order to retrieve the `preseed.cfg` file. Packer automatically starts a webserver on your computer to serve this file, but if the Ubuntu VM is unable to connect to it the Ubuntu host will hang indefinitely. See https://github.com/clong/DetectionLab/issues/592 for more details.
+{{% /notice %}}
+
 These commands can be run in parallel from three separate terminal sessions.
+
+
 
 ![Packer](https://github.com/clong/DetectionLab/blob/master/img/esxi_packer.png?raw=true)
 
