@@ -36,5 +36,7 @@ UserName : Vagrant
 
 ## Data Location
 
+This tool is located in **C:\Tools\mimikatz\x64\\**.
+
 ## External Links
 [Mimikatz on Github](https://github.com/gentilkiwi/mimikatz)
