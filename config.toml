@@ -10,6 +10,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Description of the site, will be used in meta information
   description = "DetectionLab Documentation"
   themeVariant = "clong"
+  disableInlineCopyToClipBoard = true
 
 [[deployment.targets]]
 # An arbitrary name for this target.

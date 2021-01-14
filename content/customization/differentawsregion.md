@@ -20,3 +20,6 @@ For cost reasons, DetectionLab AMIs are only currently hosted in us-west-1 and u
 7. Switch to the target region you chose in step 6 and visit the AMIs panel. You should see 3 pending AMI transfers.
 ![](https://github.com/clong/DetectionLab/blob/master/img/ami_share_4.png?raw=true)
 8. Edit `Terraform/variables.tfvars` and change the `dc_ami`, `wef_ami`, and `win10_ami` default values from empty string ("") to the AMI ID shown in your AWS console.
+9. Change the `owners` value from `505638924199` to your own AWS account ID in `variables.tf`. Be sure not to change the owner for `logger` during this step.
+
+![](../../images/owners.png)

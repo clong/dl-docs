@@ -38,7 +38,7 @@ Please remember that keeping your instances online for long periods of time will
 1. Copy the file at `DetectionLab/AWS/Terraform/terraform.tfvars.example` to `/DetectionLab/AWS/Terraform/terraform.tfvars`
 1. In `terraform.tfvars` (the file you just copied), provide overrides for the variables specified in [variables.tf](./variables.tf). 
 {{% notice info %}}
-AMIs are currently only available in us-west-1 and us-east-1 due to storage costs. If you'd like to bring up DetectionLab in another region, please view [deploying DetectionLab in a different AWS region.](TODO)
+AMIs are currently only available in us-west-1 and us-east-1 due to storage costs. If you'd like to bring up DetectionLab in another region, please view [deploying DetectionLab in a different AWS region.](../../customization/differentawsregion/)
 {{% /notice %}}
 {{% notice warning %}}
 Failing to complete this step will cause the lab to be unreachable.
