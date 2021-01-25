@@ -12,7 +12,7 @@ The supplied Terraform configuration can then be used to create EC2 instances an
 ### Prerequisites
 * A machine to build DetectionLab with
 * An AWS account
-* An AWS user and access keys to use with the AWS CLI
+* AWS user and access keys to use with the AWS CLI
 * Optional but recommended: a separate user for Terraform
 
 ### Step by step guide
@@ -21,7 +21,7 @@ The supplied Terraform configuration can then be used to create EC2 instances an
 2. [Configure the AWS command line utility](https://docs.aws.amazon.com/polly/latest/dg/setup-aws-cli.html)
 3. [Create an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html). You will upload the DetectionLab VMs to this bucket later.
 
-4. For the VM importation to work, you must create a role named `vmimport` with a trust relationship policy document that allows VM Import to assume the role, and you must attach an IAM policy to the role:
+4. For the VM importation to work, you must create a role named `vmimport` with a trust relationship policy document that allows VM Import to assume the role, and you must also attach an IAM policy to the role:
 
   ```aws iam create-role --role-name vmimport --assume-role-policy-document file:///path/to/DetectionLab/Terraform/vm_import/trust-policy.json```
 
