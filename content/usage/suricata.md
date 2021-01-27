@@ -21,6 +21,11 @@ Suricata allows users of DetectionLab to test and develop IDS signatures, as wel
 * The Suricata configuration is in `/etc/suricata/suricata.yml`
 * The emerging threat "Open" and PTResearch "AttackDetection" rule sets are installed by default via `suricata-update`
 
+## Sample Usage
+The following commands should generate alerts if run from the logger host:
+`curl -A Blacksun http://example.com`
+`curl http://testmyids.com`
+
 ## Data Location
 * Splunk
   * Alerts: `index=suricata`
