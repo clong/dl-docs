@@ -2,7 +2,7 @@
 title: "Windows Event Forwarding"
 date: 2020-08-13T17:21:36-07:00
 draft: false
-weight: 13
+weight: 14
 ---
 
 ![](../../images/windowseventforwarding.png)
