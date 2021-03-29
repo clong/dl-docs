@@ -2,7 +2,7 @@
 title: "Suricata"
 date: 2020-08-13T17:21:36-07:00
 draft: false
-weight: 10
+weight: 11
 ---
 
 ![](../../images/suricata.png)

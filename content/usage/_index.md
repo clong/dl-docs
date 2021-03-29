@@ -13,6 +13,7 @@ pre = "<i class='fas fa-server'></i> "
 #### [Microsoft ATA](microsoft_ata/)
 #### [Mimikatz](mimikatz/)
 #### [osquery](osquery/)
+#### [PurpleSharp](purplesharp/)
 #### [Splunk](splunk/)
 #### [Suricata](suricata/)
 #### [Velociraptor](velociraptor/)
