@@ -24,7 +24,10 @@ If you have both Virtualbox and VMware installed, consider disabling the network
 
 ![vagrantstatus](../../images/prepare_mac_linux.png)
 
-At this point in time, we can bring up DetectionLab using the `vagrant up --provider=<provider>` command. The provider options are `virtualbox` or `vmware_desktop`.
+At this point in time, there are two ways to bring up DetectionLab. We can bring up the hosts one at a time using `vagrant up --provider=<provider>` command. The provider options are `virtualbox` or `vmware_desktop`. However, there is also a faster way explained below.
+
+#### Speed Up Installation by Provisioning Hosts in Parallel
+Alertatively, to speed up the provisioning process, we can bring up some hosts in parallel. To do this, I recommend opening 4 separate terminal windows open to the `DetectionLab/Vagrant` directory. In terminal windows 1 and 2, you can run `vagrant up logger` and `vagrant up dc` at the same time. Before we can bring up `wef` and `win10`, we have to wait for the `dc` host to finish creating the domain. Once it has passed that step of the provisioning process, you can run `vagrant up wef` and `vagrant up win10` in terminal windows 3 and 4 at the same time.
 
 {{% notice tip %}}
 You shouldn't need to sudo any of the vagrant commands. Doing so can cause permission issues down the road.
