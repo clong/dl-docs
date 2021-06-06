@@ -9,6 +9,7 @@ pre = "<i class='fas fa-server'></i> "
 #### [Atomic Red Team](atomicredteam/)
 #### [AutorunsToWinEventLog](autorunstowineventlog/)
 #### [BadBlood](badblood/)
+#### [Exchange](exchange/)
 #### [Fleet](fleet/)
 #### [Microsoft ATA](microsoft_ata/)
 #### [Mimikatz](mimikatz/)

@@ -2,7 +2,7 @@
 title: "Fleet"
 date: 2020-08-13T17:21:36-07:00
 draft: false
-weight: 5
+weight: 6
 ---
 
 ![](../../images/fleet.png)

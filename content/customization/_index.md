@@ -7,6 +7,7 @@ pre = "<i class='fas fa-cogs'></i> "
 +++
 
 #### [AWS: Building your own AMIs](buildami/)
+#### [Adding an Exchange Server](exchange-server/)
 #### [Building Your Own Packer Boxes ](buildpackerboxes/)
 #### [Deploying DetectionLab in a Different AWS Region](differentawsregion/)
 #### [Installing the Boss of the SOC (BOTS) Datasets](bots/)
