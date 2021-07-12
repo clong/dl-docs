@@ -8,9 +8,8 @@ weight: 2
 ### Supported Provisioners
 * Virtualbox
 * A licensed copy of VMware Fusion
-  * The [VMWare Desktop Vagrant plugin](https://www.vagrantup.com/vmware/#buy-now) is $79 and is required to use Vagrant with VMware. 
+  * The [VMWare Desktop Vagrant plugin](https://www.vagrantup.com/docs/providers/vmware/installation)
   * Install it with `vagrant plugin install vagrant-vmware-desktop`.
-  * License it with `vagrant plugin license vagrant-vmware-desktop <path_to_.lic>`.
   * Additionally, the [Vagrant VMware Utility](https://www.vagrantup.com/docs/vmware/vagrant-vmware-utility.html) must also be installed
 
 {{% notice warning %}}

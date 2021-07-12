@@ -24,7 +24,7 @@ Deploy DetectionLab to your local machine as individual VMware VMs.
 
 * Windows, Linux, and MacOS are all supported
 * VMware Fusion or Workstation (It must be registered, trials will not work)
-* The [VMware Desktop Vagrant Plugin](https://www.vagrantup.com/vmware/#buy-now) (costs $79)
+* The [VMware Desktop Vagrant Plugin](https://www.vagrantup.com/docs/providers/vmware/installation) 
 * The [Vagrant VMware Utility](https://www.vagrantup.com/docs/vmware/vagrant-vmware-utility.html) must be installed
 * 55GB+ of free disk space
 * 16GB+ of RAM highly recommended
