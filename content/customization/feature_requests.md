@@ -15,3 +15,4 @@ I will not personally be undertaking the implementation of these features, but I
 - [ ] [Proxmox Support](https://github.com/clong/DetectionLab/issues/518)
 - [ ] [Configurable domain name & passwords](https://github.com/clong/DetectionLab/issues/480)
 - [ ] [VMCloak for disguising VMs](https://github.com/clong/DetectionLab/issues/643)
+- [ ] [Custom Networks/Subnets](https://github.com/clong/DetectionLab/issues/602)

@@ -32,8 +32,6 @@ An additional step-by-step guide can be found here which also details the ESXi i
 1. **(5 Minutes)** Edit the variables in `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it's being built in Packer. This is usually **VM Network**.
 ![variablesjson](https://clo.ng/img/2020/11/variablesjson.png)
 
-Additionally, during the Packer build process, the Ubuntu VM will attempt to connect to the computer you are running Packer from via HTTP. Packer automatically hosts an HTTP server for you, but if the VM is unable to connect back to port 80 on that compter (for example, a firewall blocks the connection or there is some NAT issue), setup will fail. As a workaround, I host the preseed file directly on `ping.detectionlab.network`, so you can simply change line 24 of `ESXi/Packer/ubuntu18.04.json` from ```preseed/url=http://{{user `http_server_address`}}:{{ .HTTPPort }}/preseed.cfg<wait>"```, to ```preseed/url=http://ping.detectionlab.network/preseed.cfg<wait>",```. 
-
 Note: As of ESXI 7.x, [the built-in VNC server has been removed](https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html). If you are using ESXI 7.x, we'll need to use the `vnc_over_websocket` directive.
 
 

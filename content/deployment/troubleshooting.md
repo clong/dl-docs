@@ -24,18 +24,10 @@ Here are some strategies for resolving common problems:
 
 ---
 
-**Issue:** When RDP'ing to one of the Windows hosts, you see the following error message: 
+**Issue:** I get an "ERR_TOO_MANY_REDIRECTS" when trying to connect to the Exchange server over HTTPS
 
-> An authentication error has occurred. The function requested is not supported. This could be due to CredSSP encryption oracle remediation
+**Workarounds:** This often happens when you try to connect to Exchange while the server is still initializing. Wait 5-10 minutes, then try again. If the issue persists, please file an issue on GitHub.
 
-![](../../images/rdp.png)
-
-**Workarounds:**
-
-From the host you are RDP'ing from, run gpedit.msc, and then browse to Computer Configuration > Administrative Templates > System > Credentials Delegation in the navigation pane. 
-Change the **Encryption Oracle Remediation** policy to Enabled, and then change **Protection Level** to **Vulnerable**.
-
-See this issue for more detail: https://github.com/clong/DetectionLab/issues/478
 
 ---
 
