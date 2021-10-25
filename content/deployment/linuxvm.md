@@ -36,7 +36,7 @@ When we run Vagrant up, here's what happens:
 
 1. Vagrant will bring up one host at a time, starting with logger and followed by dc, wef, and win10. 
 2. Three boxes will be downloaded from Vagrant cloud:
-    * [bento/ubuntu18.04](https://app.vagrantup.com/bento/boxes/ubuntu-18.04)
+    * [bento/ubuntu20.04](https://app.vagrantup.com/bento/boxes/ubuntu-20.04)
     * [detectionlab/win2016](https://app.vagrantup.com/detectionlab/boxes/win2016)
     * [detectionlab/win10](https://app.vagrantup.com/detectionlab/boxes/win10)
 3. Each box will go through provisioning, which configures the host and installs software. 

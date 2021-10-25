@@ -32,12 +32,9 @@ An additional step-by-step guide can be found here which also details the ESXi i
 1. **(5 Minutes)** Edit the variables in `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it's being built in Packer. This is usually **VM Network**.
 ![variablesjson](https://clo.ng/img/2020/11/variablesjson.png)
 
-Note: As of ESXI 7.x, [the built-in VNC server has been removed](https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html). If you are using ESXI 7.x, we'll need to use the `vnc_over_websocket` directive.
+#### Special Configuration for ESXi 6.x
 
-
-#### Special Configuration for ESXi 7.x
-
-If you're using ESXi 7.x (as opposed to 6.x), add the following two directives as the top items under the `builders` array:
+If you're using ESXi 6.x (as opposed to 7.x), remove the following two directives from `builders` array:
 
 * "vnc_over_websocket": true,
 * "insecure_connection": true,
@@ -46,8 +43,8 @@ If you're using ESXi 7.x (as opposed to 6.x), add the following two directives a
 {
   "builders": [
     {
-      "vnc_over_websocket": true,
-      "insecure_connection": true,
+      "vnc_over_websocket": true,    <---- Remove
+      "insecure_connection": true,   <---- Remove
       "vnc_disable_password": true,
       "keep_registered": true,
 ...
@@ -56,21 +53,27 @@ If you're using ESXi 7.x (as opposed to 6.x), add the following two directives a
 to each of the following files:
   * DetectionLab/ESXi/Packer/windows_10_esxi.json
   * DetectionLab/ESXi/Packer/windows_2016_esxi.json
-  * DetectionLab/ESXi/Packer/ubuntu1804_esxi.json
+  * DetectionLab/ESXi/Packer/ubuntu2004_esxi.json
 
 The remaining steps on this page apply to both both ESXi 6.x and 7.x:
 
 2. **(45 Minutes)** From the `DetectionLab/ESXi/Packer` directory, run:
 * `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json`
 * `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json`
-* `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu1804_esxi.json`
+* `PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json`
 
 These commands can be run in parallel from three separate terminal sessions.
 
 ![Packer](https://github.com/clong/DetectionLab/blob/master/img/esxi_packer.png?raw=true)
 
-3. **(1 Minute)** Once the Packer builds finish, verify that you now see Windows10, WindowsServer2016, and Ubuntu1804 in your ESXi console
+3. **(1 Minute)** Once the Packer builds finish, verify that you now see Windows10, WindowsServer2016, and Ubuntu2004 in your ESXi console
 ![Ansible](https://github.com/clong/DetectionLab/blob/master/img/esxi_console.png?raw=true)
+
+{{% notice warning %}}
+There is a bug (https://github.com/clong/DetectionLab/issues/712) with the logger VM where the CD-ROM is not properly being ejected/removed from the VM. After you've seen that Ubuntu2004 is in your ESXi console, click into the VM details > Edit > Click the little "x" on the row with the CD-ROM drive to remove the device entirely.
+Hopefully this step won't be needed after the root cause of this issue is determined.
+{{% /notice %}}
+
 4. **(5 Minutes)** In `DetectionLab/ESXi`, [Create a terraform.tfvars file](https://www.terraform.io/docs/configuration/variables.html#variable-definitions-tfvars-files) (RECOMMENDED) to override the default variables listed in variables.tf.
 ![variablestfvars](https://clo.ng/img/2020/11/variablestfvars.png)
 
