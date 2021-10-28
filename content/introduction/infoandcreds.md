@@ -9,11 +9,11 @@ weight: 2
 
 * **Domain Name:** windomain.local
 * **Admininstrator login:** vagrant:vagrant
-* **Fleet login:** https://192.168.38.105:8412 - admin:admin123#
-* **Splunk login:** https://192.168.38.105:8000 - admin:changeme
-* **MS ATA login:** https://192.168.38.103 - wef\vagrant:vagrant
-* **Guacamole login:** http://192.168.38.105:8080/guacamole - vagrant:vagrant
-* **Velociraptor login:** https://192.168.38.105:9999 - admin:changeme
+* **Fleet login:** https://192.168.56.105:8412 - admin:admin123#
+* **Splunk login:** https://192.168.56.105:8000 - admin:changeme
+* **MS ATA login:** https://192.168.56.103 - wef\vagrant:vagrant
+* **Guacamole login:** http://192.168.56.105:8080/guacamole - vagrant:vagrant
+* **Velociraptor login:** https://192.168.56.105:9999 - admin:changeme
 
 ## Lab Hosts
 * **DC - Windows 2016 Domain Controller**

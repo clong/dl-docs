@@ -58,7 +58,7 @@ The libvirt builder is highly experimental. This sections describes the trade-of
 The vagrant-libvirt provider works by binding to a "management" network adapter IP addresses. The way vagrant finds the VM's IP address is by probing the dnsmasq lease file of libvirt's host. There's probably a better way, but this is the best I could do that just works (tm) so far. Here's what the configuration looks like:
 
 * Management Network: Isolated network, no NAT, no internet access, with DHCP.
-* Detectionlab Network: 192.168.38.0/24, with NAT, with internet access, with DHCP.
+* Detectionlab Network: 192.168.56.0/24, with NAT, with internet access, with DHCP.
 
 - The synced folder is using an old, slow and buggy plugin. While this barely works, it's enough to push the provisioning scripts to the Windows instances. Any modifications to the `vm.synced_folder` in the VagrantFile libvirt provider will likely break the provisionning process
 
