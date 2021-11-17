@@ -14,3 +14,4 @@ pre = "<i class='fas fa-hammer'></i> "
 #### [ESXi Deployment](esxi/)
 #### [HyperV Deployment](hyperv)
 #### [LibVirt Deployment](libvirt/)
+#### [Proxmox Deployment](proxmox/)

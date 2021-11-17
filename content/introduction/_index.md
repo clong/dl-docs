@@ -13,15 +13,16 @@ DetectionLab can currently be deployed to the following platforms:
 * Virtualbox (Windows, MacOS, Linux)
 * VMware Workstation/Fusion (Windows, MacOS, Linux)
 * HyperV
-* LibVirt (Not officially supported)
 * ESXi
 * AWS
 * Azure
+* LibVirt (Not officially supported)
+* Proxmox (Not officially supported)
 
 DetectionLab was built with defenders in mind. Offensive security practitioners have entire Linux distributions dedicated to streamline
 their work, so DetectionLab is my effort to simplify testing, analysis, research for defensive security practitioners. 
 
-Read more about Detection Lab on Medium here: https://medium.com/@clong/introducing-detection-lab-61db34bed6ae
+Read more about DetectionLab on Medium here: https://medium.com/@clong/introducing-detection-lab-61db34bed6ae
 
 ### Primary Lab Features
 * Microsoft Advanced Threat Analytics (https://www.microsoft.com/en-us/cloud-platform/advanced-threat-analytics) is installed on the WEF machine, with the lightweight ATA gateway installed on the DC
