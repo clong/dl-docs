@@ -28,7 +28,7 @@ I do not officially support or troubleshoot DetectionLab issues using the Proxmo
 
 ### Steps
 
-1. **(5 Minutes)** Edit the variables in DetectionLab/Proxmox/Packer/variables.json to match your Proxmox configuration. The esxi_network_with_dhcp_and_internet variable refers to any Proxmox network that will be able to provide DHCP and internet access to the VM while it’s being built in Packer. The provisioning_machine_ip variable refers to the IP address of your provisioning host.  
+1. **(5 Minutes)** Edit the variables in DetectionLab/Proxmox/Packer/variables.json to match your Proxmox configuration. The proxmox_network_with_dhcp_and_internet variable refers to any Proxmox network that will be able to provide DHCP and internet access to the VM while it’s being built in Packer. The provisioning_machine_ip variable refers to the IP address of your provisioning host.  
 2. **(45 Minutes)** From the DetectionLab/Proxmox/Packer directory, run:
 - PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_proxmox.json
 - PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_proxmox.json
