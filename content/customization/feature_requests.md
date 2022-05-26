@@ -16,3 +16,4 @@ I will not personally be undertaking the implementation of these features, but I
 - [ ] [Configurable domain name & passwords](https://github.com/clong/DetectionLab/issues/480)
 - [ ] [VMCloak for disguising VMs](https://github.com/clong/DetectionLab/issues/643)
 - [ ] [Custom Networks/Subnets](https://github.com/clong/DetectionLab/issues/602)
+- [ ] [Use DNS names instead of IP addresses in scripts](https://github.com/clong/DetectionLab/issues/747)

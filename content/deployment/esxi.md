@@ -24,7 +24,7 @@ An additional step-by-step guide can be found here which also details the ESXi i
     * Instructions for those steps are here: https://nickcharlton.net/posts/using-packer-esxi-6.html
     * Alternatively, you can install the VIB file from https://github.com/sukster/ESXi-Packer-VNC which will automatically open the VNC ports on the ESXi firewall.
 5. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) and pywinrm via `pip3 install ansible pywinrm --user` or by creating and using a virtual environment.
-6. [Packer](https://www.packer.io/downloads) v1.6.3+ must be installed and in your PATH
+6. [Packer](https://www.packer.io/downloads) v1.7.0+ must be installed and in your PATH
 7. [sshpass](https://linux.die.net/man/1/sshpass) must be installed to allow Ansible to use password login. On MacOS, install via `brew install hudochenkov/sshpass/sshpass` as `brew install sshpass` does not allow it to be installed.
 
 ## Steps
