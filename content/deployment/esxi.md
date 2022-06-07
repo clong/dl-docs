@@ -16,6 +16,7 @@ An additional step-by-step guide can be found here which also details the ESXi i
 4. Your ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running Terraform - ensure your firewall is configured to allow this.
 3. [OVFTool](https://my.vmware.com/web/vmware/details?downloadGroup=OVFTOOL420&productId=618) must be installed and in your path. 
     * On MacOS, I solved this by creating a symbolic link to the ovftool included in VMWare Fusion: `sudo ln -s "/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool" "/usr/local/bin/ovftool"`
+    * On Silicon Macs, OVFtool is not included in VMWare Fusion Tech Preview, so you'll have to use the download link below and symlink via `sudo ln -s /Applications/VMware\ OVF\ Tool/ovftool /usr/local/bin/ovftool`
     * Downloads for OVFTool are also here: https://code.vmware.com/web/tool/4.4.0/ovf
 4. On your ESXi instance, you must:
    1. Enable SSH
@@ -68,11 +69,6 @@ These commands can be run in parallel from three separate terminal sessions.
 
 3. **(1 Minute)** Once the Packer builds finish, verify that you now see Windows10, WindowsServer2016, and Ubuntu2004 in your ESXi console
 ![Ansible](https://github.com/clong/DetectionLab/blob/master/img/esxi_console.png?raw=true)
-
-{{% notice warning %}}
-There is a bug (https://github.com/clong/DetectionLab/issues/712) with the logger VM where the CD-ROM is not properly being ejected/removed from the VM. After you've seen that Ubuntu2004 is in your ESXi console, click into the VM details > Edit > Click the little "x" on the row with the CD-ROM drive to remove the device entirely.
-Hopefully this step won't be needed after the root cause of this issue is determined.
-{{% /notice %}}
 
 4. **(5 Minutes)** In `DetectionLab/ESXi`, [Create a terraform.tfvars file](https://www.terraform.io/docs/configuration/variables.html#variable-definitions-tfvars-files) (RECOMMENDED) to override the default variables listed in variables.tf.
 ![variablestfvars](https://clo.ng/img/2020/11/variablestfvars.png)
