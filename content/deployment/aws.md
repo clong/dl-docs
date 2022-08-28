@@ -34,7 +34,7 @@ Please remember that keeping your instances online for long periods of time will
 1. Clone the DetectionLab repo to your filesystem: `git clone https://github.com/clong/DetectionLab.git`
 1. In your AWS console, create and apply [this policy](https://gist.github.com/clong/5eae6a83e6484bb2c01fa5e9cc6e8c9d) to the IAM user whose keypair you will be using for terraform. This policy has been tailored to only use the required permissions needed for DetectionLab.
 1. [Configure the AWS command line utility](https://docs.aws.amazon.com/polly/latest/dg/setup-aws-cli.html) and set up a profile for Terraform via `aws configure --profile terraform`.
-1. Create a private/public keypair to use to SSH into logger: `ssh-keygen -b 2048 -f ~/.ssh/id_logger`
+1. Create a private/public keypair to use to SSH into logger: `ssh-keygen -b 4096 -f ~/.ssh/id_logger`
 1. Copy the file at `DetectionLab/AWS/Terraform/terraform.tfvars.example` to `/DetectionLab/AWS/Terraform/terraform.tfvars`
 1. In `terraform.tfvars` (the file you just copied), provide overrides for the variables specified in [variables.tf](./variables.tf). 
 {{% notice info %}}
