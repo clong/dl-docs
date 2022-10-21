@@ -97,9 +97,6 @@ After the provisioning finishes, you can run `.\post_build_checks.sh` to verify 
 [*] Verifying that Fleet is running and reachable...
   [✓] Fleet is running and reachable.
 
-[*] Verifying that Microsoft ATA is running and reachable...
-  [✓] Microsoft ATA is running and reachable.
-
 [*] Verifying that the Velociraptor service is running and reachable...
   [✓] Velociraptor is running and reachable.
 

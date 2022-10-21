@@ -95,9 +95,6 @@ If all goes well, this process should continue for 1-2 hours depending on your c
 [*] Verifying that Fleet is running and reachable...
   [✓] Fleet is running and reachable.
 
-[*] Verifying that Microsoft ATA is running and reachable...
-  [✓] Microsoft ATA is running and reachable.
-
 [*] Verifying that the Velociraptor service is running and reachable...
   [✓] Velociraptor is running and reachable.
 

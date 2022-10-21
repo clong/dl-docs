@@ -45,7 +45,6 @@ At this point in time, we're at this state:
 
 At this point in time, you should be able to open a new terminal window, navigate to `DetectionLab/Azure/Terraform` and run `terraform output`. You should see something like the following:
 ```
-ata_url = https://52.191.136.x
 dc_public_ip = 52.183.119.x
 fleet_url = https://52.191.170.x:8412
 guacamole_url = https://52.191.136.x:8080/guacamole

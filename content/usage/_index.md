@@ -11,7 +11,6 @@ pre = "<i class='fas fa-server'></i> "
 #### [BadBlood](badblood/)
 #### [Exchange](exchange/)
 #### [Fleet](fleet/)
-#### [Microsoft ATA](microsoft_ata/)
 #### [Mimikatz](mimikatz/)
 #### [osquery](osquery/)
 #### [PurpleSharp](purplesharp/)
